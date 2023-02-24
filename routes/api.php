@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DiagnosisController;
+use App\Http\Controllers\EvalueationController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\QuestionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,13 +24,21 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::apiResource('/v1/user', UserController::class)->only(([
-    'store','show'
+    'store','show', 'index'
+]));
+
+Route::apiResource('/v1/like', LikeController::class)->only(([
+    'index','show', 'store' , 'destroy'
 ]));
 
 Route::apiResource('/v1/diagnosis', DiagnosisController::class)->only(([
-    'index'
+    'index', 'store'
 ]));
 
 Route::apiResource('/v1/question', QuestionController::class)->only(([
-    'index'
+    'store', 'index', 'show'
 ]));
+
+Route::post('/v1/evalueation', [EvalueationController::class, 'store']);
+
+// Route::get('/v1/like/{id}', [DiagnosisController::class, 'check']);

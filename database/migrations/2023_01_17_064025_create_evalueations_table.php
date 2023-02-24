@@ -15,7 +15,7 @@ class CreateEvalueationsTable extends Migration
     {
         Schema::create('evalueations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignUuid('user_id')->constrained();
             $table->foreignId('diagnosis_id')->constrained();
             $table->integer('score');
             $table->text('comment');

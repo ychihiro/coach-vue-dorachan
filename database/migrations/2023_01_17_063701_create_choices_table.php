@@ -17,7 +17,7 @@ class CreateChoicesTable extends Migration
             $table->id();
             $table->foreignId('question_id')->constrained();
             $table->string('content');
-            $table->string('item');
+            $table->string('category');
             $table->integer('score');
             $table->timestamps();
         });

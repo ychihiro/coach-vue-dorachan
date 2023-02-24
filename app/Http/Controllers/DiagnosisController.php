@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Character;
 use App\Models\Diagnosis;
+use App\Models\Like;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DiagnosisController extends Controller
 {
@@ -27,11 +29,30 @@ class DiagnosisController extends Controller
      */
     public function store(Request $request)
     {
-        // $param = [
-        //     'user_id' => $request->input('user_id'),
-
-        // ]
+        $diagnosis = new Diagnosis($request->get('diagnosis', ['name' => $request->diagnosis_name]));
+        $diagnosis->save();
         
+        $characters = $request->characters;
+        foreach ( $characters as $item ) {
+            $character = new Character($request->get('character', [
+            'diagnosis_id' => $diagnosis->id,
+            'name' => $item['character_name'],
+            'path' => $item['path'],
+            'description' => $item['description'],
+            'cooperation' => $item['cooperation'],
+            'extroversion' => $item['extroversion'],
+            'sincerity' => $item['sincerity'],
+            'openness' => $item['openness'],
+            'nerve' => $item['nerve'],
+        ]));
+        $character->save();
+        //     // echo 'キャラ名:' . $character['character_name'];
+        //     // echo 'パス名:' . $character['path'];
+        //     // echo 'パス名:' . $character['description'];
+        }
+        return response()->json([
+            'data' => [$diagnosis, $character]
+        ], 201);
     }
 
     /**
@@ -42,7 +63,7 @@ class DiagnosisController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

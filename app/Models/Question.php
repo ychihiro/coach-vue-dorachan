@@ -11,7 +11,7 @@ class Question extends Model
 
     protected $fillable = [
         'diagnosis_id',
-        'content'
+        'question'
     ];
 
     public function choices() {

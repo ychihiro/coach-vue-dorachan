@@ -15,7 +15,7 @@ class CreateParchasesTable extends Migration
     {
         Schema::create('parchases', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignUuid('user_id')->constrained();
             $table->string('fullname');
             $table->char('postcode', 8);
             $table->Integer('prefecture');

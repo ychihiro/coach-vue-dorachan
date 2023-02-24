@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Character;
-use Illuminate\Http\Request;
+use App\Models\Like;
+use App\Models\Diagnosis;
 use App\Models\User;
+use Illuminate\Http\Request;
 
-class UserController extends Controller
+class LikeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $item = Character::pluck('path')->first();
-        return response()->json($item, 200);
+        $likedItem = Like::all();
+        return response()->json($likedItem, 200);
     }
 
     /**
@@ -27,9 +28,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = User::create($request->all());
+        $item = Like::create($request->all());
         return response()->json([
-            'data' => $user
+            'data' => $item
         ], 201);
     }
 
@@ -39,18 +40,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function show($id)
+    // public function show($id, Diagnosis $diagnosis, Request $request)
     // {
-    //     $user = User::find($id);
-    //     if ($user) {
-    //         return response()->json([
-    //             'data' => $user
-    //         ], 200);
-    //     } else {
-    //         return response()->json([
-    //             'message' => 'Not found',
-    //         ], 404);
-    //     }
+    //     // $count = Like::where('diagnosis_id', $request->id )->get();
+    //     $likes_check = Like::where('user_id', $id)->get();
+    //     return response()->json($likes_check, 200);
     // }
 
     /**
@@ -60,10 +54,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    // public function update(Request $request, $id)
+    // {
+    //     $item = Like::where('user_id');
+    // }
 
     /**
      * Remove the specified resource from storage.
@@ -71,8 +65,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        Like::where('user_id', $request['user_id'])->where('diagnosis_id', $id)->delete();
     }
 }

@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             DiagnosesTableSeeder::class,
             CharactersTableSeeder::class,
             QuestionsTableSeeder::class,
-            ChoicesTableSeeder::class
+            ChoicesTableSeeder::class,
+            // LikesTableSeeder::class
             ]);
     }
 }

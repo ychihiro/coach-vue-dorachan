@@ -21,7 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'uuid'
+        'id'
     ];
 
     /**
@@ -46,5 +46,10 @@ class User extends Authenticatable
     public function likes()
     {
         return $this->hasMany('App\Models\Like');
+    }
+
+    public function evalueations()
+    {
+        return $this->hasMany('App\Models\Evalueation');
     }
 }

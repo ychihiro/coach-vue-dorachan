@@ -17,13 +17,13 @@ class CharactersTableSeeder extends Seeder
         $param = [
             'diagnosis_id' => 1,
             'name' => 'ドラえもん',
-            'path' => 'ドラえもん.jpg',
-            'description' => '22世紀の猫型ロボット！',
-            'cooperation' => 6,
-            'extroversion' => 4,
-            'sincerity' => 4,
-            'openness' => 6,
-            'nerve' => 5
+            'path' => 'download-2.png',
+            'description' => 'のび太を助ける猫型ロボット！',
+            'cooperation' => 5,
+            'extroversion' => 3,
+            'sincerity' => 3,
+            'openness' => 4,
+            'nerve' => 4
         ];
         Character::create($param);
         $param = [
@@ -35,7 +35,7 @@ class CharactersTableSeeder extends Seeder
             'extroversion' => 1,
             'sincerity' => 2,
             'openness' => 5,
-            'nerve' => 6
+            'nerve' => 5
         ];
         Character::create($param);
         $param = [
@@ -44,10 +44,10 @@ class CharactersTableSeeder extends Seeder
             'path' => 'ドラミちゃん.jpg',
             'description' => 'ドラえもんの優秀な妹！',
             'cooperation' => 4,
-            'extroversion' => 5,
-            'sincerity' => 5,
+            'extroversion' => 4,
+            'sincerity' => 4,
             'openness' => 2,
-            'nerve' => 5
+            'nerve' => 4
         ];
         Character::create($param);
         $param = [
@@ -55,11 +55,11 @@ class CharactersTableSeeder extends Seeder
             'name' => 'しずかちゃん',
             'path' => 'しずかちゃん.jpg',
             'description' => 'しっかり者のヒロイン！',
-            'cooperation' => 5,
-            'extroversion' => 3,
-            'sincerity' => 6,
+            'cooperation' => 4,
+            'extroversion' => 2,
+            'sincerity' => 5,
             'openness' => 1,
-            'nerve' => 4
+            'nerve' => 3
         ];
         Character::create($param);
         $param = [
@@ -68,7 +68,7 @@ class CharactersTableSeeder extends Seeder
             'path' => 'ジャイアン.jpg',
             'description' => '歌を愛するガキ大将！',
             'cooperation' => 1,
-            'extroversion' => 6,
+            'extroversion' => 5,
             'sincerity' => 1,
             'openness' => 3,
             'nerve' => 1
@@ -80,8 +80,8 @@ class CharactersTableSeeder extends Seeder
             'path' => 'スネ夫.jpg',
             'description' => '自慢ばかりのナルシスト！',
             'cooperation' => 3,
-            'extroversion' => 5,
-            'sincerity' => 3,
+            'extroversion' => 4,
+            'sincerity' => 2,
             'openness' => 4,
             'nerve' => 2
         ];
@@ -91,11 +91,11 @@ class CharactersTableSeeder extends Seeder
             'name' => 'アンパンマン',
             'path' => 'ドラえもん.jpg',
             'description' => '優しく面倒見のいいあなたはドラえもんタイプ！困っている人を放っておけず助けてあげちゃうそんなあなたは周囲からも好かれます！一方で繊細で傷つきやすく、悪い評価が気になると落ち込んでしまうことも・・・。クヨクヨと悩みすぎずに気持ちを切り替えてね！',
-            'cooperation' => 9,
-            'extroversion' => 8,
-            'sincerity' => 3,
-            'openness' => 6,
-            'nerve' => 8
+            'cooperation' => 5,
+            'extroversion' => 5,
+            'sincerity' => 5,
+            'openness' => 5,
+            'nerve' => 5
         ];
         Character::create($param);
         $param = [
