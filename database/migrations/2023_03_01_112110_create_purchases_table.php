@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParchasesTable extends Migration
+class CreatePurchasesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateParchasesTable extends Migration
      */
     public function up()
     {
-        Schema::create('parchases', function (Blueprint $table) {
+        Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->foreignUuid('user_id')->constrained();
             $table->string('fullname');
@@ -23,7 +23,6 @@ class CreateParchasesTable extends Migration
             $table->string('building_name');
             $table->string('phone');
             $table->timestamps();
-
         });
     }
 
@@ -34,6 +33,6 @@ class CreateParchasesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parchases');
+        Schema::dropIfExists('purchases');
     }
 }

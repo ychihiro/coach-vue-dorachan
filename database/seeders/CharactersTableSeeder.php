@@ -17,7 +17,7 @@ class CharactersTableSeeder extends Seeder
         $param = [
             'diagnosis_id' => 1,
             'name' => 'ドラえもん',
-            'path' => 'download-2.png',
+            'path' => 'images/ドラえもん.jpg',
             'description' => 'のび太を助ける猫型ロボット！',
             'cooperation' => 5,
             'extroversion' => 3,
@@ -29,7 +29,7 @@ class CharactersTableSeeder extends Seeder
         $param = [
             'diagnosis_id' => 1,
             'name' => 'のび太',
-            'path' => 'のび太.jpg',
+            'path' => 'images/のび太.jpg',
             'description' => '心優しい怠け者！',
             'cooperation' => 2,
             'extroversion' => 1,
@@ -41,7 +41,7 @@ class CharactersTableSeeder extends Seeder
         $param = [
             'diagnosis_id' => 1,
             'name' => 'ドラミちゃん',
-            'path' => 'ドラミちゃん.jpg',
+            'path' => 'images/ドラミちゃん.jpg',
             'description' => 'ドラえもんの優秀な妹！',
             'cooperation' => 4,
             'extroversion' => 4,
@@ -53,7 +53,7 @@ class CharactersTableSeeder extends Seeder
         $param = [
             'diagnosis_id' => 1,
             'name' => 'しずかちゃん',
-            'path' => 'しずかちゃん.jpg',
+            'path' => 'images/しずかちゃん.jpg',
             'description' => 'しっかり者のヒロイン！',
             'cooperation' => 4,
             'extroversion' => 2,
@@ -65,7 +65,7 @@ class CharactersTableSeeder extends Seeder
         $param = [
             'diagnosis_id' => 1,
             'name' => 'ジャイアン',
-            'path' => 'ジャイアン.jpg',
+            'path' => 'images/ジャイアン.jpg',
             'description' => '歌を愛するガキ大将！',
             'cooperation' => 1,
             'extroversion' => 5,
@@ -77,7 +77,7 @@ class CharactersTableSeeder extends Seeder
         $param = [
             'diagnosis_id' => 1,
             'name' => 'スネ夫',
-            'path' => 'スネ夫.jpg',
+            'path' => 'images/スネ夫.jpg',
             'description' => '自慢ばかりのナルシスト！',
             'cooperation' => 3,
             'extroversion' => 4,

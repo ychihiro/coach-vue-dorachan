@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             CharactersTableSeeder::class,
             QuestionsTableSeeder::class,
             ChoicesTableSeeder::class,
+            ProductsTableSeeder::class
             // LikesTableSeeder::class
             ]);
     }

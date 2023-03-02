@@ -9,9 +9,15 @@ class Question extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'diagnosis_id',
-        'question'
+    // protected $fillable = [
+    //     'diagnosis_id',
+    //     'content',
+    //     'number'
+    // ];
+    protected $guarded = [
+        'id',
+        'created_at',
+        'updated_at'
     ];
 
     public function choices() {

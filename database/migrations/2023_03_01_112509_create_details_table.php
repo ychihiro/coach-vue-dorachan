@@ -16,7 +16,7 @@ class CreateDetailsTable extends Migration
         Schema::create('details', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained();
-            $table->foreignId('parchase_id')->constrained();
+            $table->foreignId('purchase_id')->constrained();
             $table->integer('count');
             $table->timestamps();
         });

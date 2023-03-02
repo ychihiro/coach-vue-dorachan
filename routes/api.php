@@ -5,6 +5,8 @@ use App\Http\Controllers\DiagnosisController;
 use App\Http\Controllers\EvalueationController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\ResultController;
+use App\Http\Controllers\PurchaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +41,13 @@ Route::apiResource('/v1/question', QuestionController::class)->only(([
     'store', 'index', 'show'
 ]));
 
+Route::apiResource('/v1/purchase', PurchaseController::class)->only(([
+    'index'
+]));
+Route::get('/v1/purchase/{id}', [PurchaseController::class, 'product']);
+
 Route::post('/v1/evalueation', [EvalueationController::class, 'store']);
+
+Route::post('/v1/result', [ResultController::class, 'store']);
 
 // Route::get('/v1/like/{id}', [DiagnosisController::class, 'check']);

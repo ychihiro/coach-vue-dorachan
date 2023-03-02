@@ -9,7 +9,7 @@ class Diagnosis extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'name', 'path'];
+    protected $fillable = ['user_id', 'name'];
 
     public function characters() {
         return $this->hasMany('App\Models\Character');
@@ -31,5 +31,15 @@ class Diagnosis extends Model
     public function evalueations()
     {
         return $this->hasMany('App\Models\Evalueation', 'diagnosis_id');
+    }
+
+    public function results()
+    {
+        return $this->hasMany('App\Models\Result');
+    }
+
+    public function products()
+    {
+        return $this->hasMany('App\Models\Result');
     }
 }

@@ -17,7 +17,6 @@ class CreateDiagnosesTable extends Migration
             $table->id();
             $table->foreignUuid('user_id')->nullable()->constrained();
             $table->string('name')->nullable();
-            $table->string('path')->nullable();
             $table->timestamps();
         });
     }

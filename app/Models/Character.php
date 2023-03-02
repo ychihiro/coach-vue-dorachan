@@ -9,6 +9,7 @@ class Character extends Model
 {
     use HasFactory;
 
+    // protected $fillable = ['diagnosis_name', 'name', 'path'];
     protected $guarded = [
         'id',
         'created_at',
@@ -17,5 +18,9 @@ class Character extends Model
 
     public function diagnosis() {
         return $this->belongsTo('App\Models\Diagnosis');
+    }
+
+    public function results() {
+        return $this->belongsTo('App\Models\Result');
     }
 }
