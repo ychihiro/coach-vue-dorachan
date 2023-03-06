@@ -7,6 +7,7 @@ use App\Http\Controllers\LikeController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ResultController;
 use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -49,5 +50,8 @@ Route::get('/v1/purchase/{id}', [PurchaseController::class, 'product']);
 Route::post('/v1/evalueation', [EvalueationController::class, 'store']);
 
 Route::post('/v1/result', [ResultController::class, 'store']);
+
+Route::post('/v1/payment', [PaymentController::class, 'payment']);
+
 
 // Route::get('/v1/like/{id}', [DiagnosisController::class, 'check']);

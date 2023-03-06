@@ -16,11 +16,12 @@ class UserFactory extends Factory
     {
         return [
             'id' => $this->faker->uuid,
-            'name' => $this->faker->name(),
+            'name' => '管理者',
             'email' => $this->faker->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
+            'role' => 1,
+            // 'email_verified_at' => now(),
+            'password' => 'addminuser',
+            // 'remember_token' => Str::random(10),
         ];
     }
 
