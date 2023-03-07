@@ -8,6 +8,7 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ResultController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\MailController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -46,12 +47,10 @@ Route::apiResource('/v1/purchase', PurchaseController::class)->only(([
     'index'
 ]));
 Route::get('/v1/purchase/{id}', [PurchaseController::class, 'product']);
-
 Route::post('/v1/evalueation', [EvalueationController::class, 'store']);
-
 Route::post('/v1/result', [ResultController::class, 'store']);
-
 Route::post('/v1/payment', [PaymentController::class, 'payment']);
+Route::post('/v1/mail', [MailController::class, 'send']);
 
 
 // Route::get('/v1/like/{id}', [DiagnosisController::class, 'check']);
