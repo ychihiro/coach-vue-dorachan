@@ -7,6 +7,7 @@ use App\Models\Choice;
 use App\Models\Diagnosis;
 use App\Models\Like;
 use App\Models\Question;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
@@ -144,7 +145,12 @@ class DiagnosisController extends Controller
      */
     public function show($id)
     {
-        
+        $items = Diagnosis::whereHas('likes', function($query) use($id) {    
+            $query->where('user_id', $id);
+        })->get();
+        return response()->json([
+            'data' => $items
+        ], 200);
     }
 
     /**

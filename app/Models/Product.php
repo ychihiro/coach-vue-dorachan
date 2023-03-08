@@ -20,4 +20,14 @@ class Product extends Model
     {
         return $this->belongsTo('App\Models\Diagnosis');
     }
+
+    public function carts()
+    {
+        return $this->hasMany('App\Models\Cart');
+    }
+
+    public function detail()
+    {
+        return $this->hasOne('App\Models\Detail');
+    }
 }

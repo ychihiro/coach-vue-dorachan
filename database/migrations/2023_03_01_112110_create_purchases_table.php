@@ -18,10 +18,11 @@ class CreatePurchasesTable extends Migration
             $table->foreignUuid('user_id')->constrained();
             $table->string('fullname');
             $table->char('postcode', 8);
-            $table->Integer('prefecture');
+            $table->string('prefecture');
             $table->string('city');
             $table->string('building_name');
-            $table->string('phone');
+            $table->date('delivery_date');
+            $table->time('delivery_time');
             $table->timestamps();
         });
     }

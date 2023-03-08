@@ -15,11 +15,24 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'id' => 'S2B24W0iPnWLSV2H7k7wDn6Ru5G2',
-            'name' => '管理者',
-            'email' => 'rgleason@example.net',
-            'password' => 'addminuser',
-            'role' => 1
+            'id' => 'DFh5ScxnLBPbenjvAM6tRzYoH0w2',
+            'name' => 'のびのび太',
+            'email' => 'nobi@nobita.com',
+            'password' => 'nobinobita',
+        ];
+        User::create($param);
+        $param = [
+            'id' => 'dwpkPBBKYbQoOdUH8nAEWaD6wTY2',
+            'name' => '花子',
+            'email' => 'hanako@flower.com',
+            'password' => 'hanakosan',
+        ];
+        User::create($param);
+        $param = [
+            'id' => 'IUktP3N8NfetR61Cczy6',
+            'name' => '千尋',
+            'email' => 'y.chihiro0510@gmail.com',
+            'password' => 'chichichichi',
         ];
         User::create($param);
     }

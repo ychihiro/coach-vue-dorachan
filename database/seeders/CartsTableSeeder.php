@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Like;
+use App\Models\Cart;
 use Illuminate\Database\Seeder;
 
-class LikesTableSeeder extends Seeder
+class CartsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,13 +16,18 @@ class LikesTableSeeder extends Seeder
     {
         $param = [
             'user_id' => 'DFh5ScxnLBPbenjvAM6tRzYoH0w2',
-            'diagnosis_id' => 1
+            'product_id' => 2,
         ];
-        Like::create($param);
+        Cart::create($param);
+        $param = [
+            'user_id' => 'DFh5ScxnLBPbenjvAM6tRzYoH0w2',
+            'product_id' => 1,
+        ];
+        Cart::create($param);
         $param = [
             'user_id' => 'dwpkPBBKYbQoOdUH8nAEWaD6wTY2',
-            'diagnosis_id' => 3
+            'product_id' => 3,
         ];
-        Like::create($param);
+        Cart::create($param);
     }
 }

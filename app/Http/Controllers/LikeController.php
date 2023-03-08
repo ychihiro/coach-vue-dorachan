@@ -20,6 +20,13 @@ class LikeController extends Controller
         return response()->json($likedItem, 200);
     }
 
+    public function show($id)
+    {
+        $likedItem = Like::where('user_id', $id)->get();
+        return response()->json([
+            'data' => [$likedItem]
+        ], 200);
+    }
     /**
      * Store a newly created resource in storage.
      *

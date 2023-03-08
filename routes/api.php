@@ -36,7 +36,7 @@ Route::apiResource('/v1/like', LikeController::class)->only(([
 ]));
 
 Route::apiResource('/v1/diagnosis', DiagnosisController::class)->only(([
-    'index', 'store'
+    'index', 'store', 'show'
 ]));
 
 Route::apiResource('/v1/question', QuestionController::class)->only(([
@@ -44,11 +44,12 @@ Route::apiResource('/v1/question', QuestionController::class)->only(([
 ]));
 
 Route::apiResource('/v1/purchase', PurchaseController::class)->only(([
-    'index'
+    'index', 'show'
 ]));
 Route::get('/v1/purchase/{id}', [PurchaseController::class, 'product']);
 Route::post('/v1/evalueation', [EvalueationController::class, 'store']);
 Route::post('/v1/result', [ResultController::class, 'store']);
+Route::get('/v1/result/{id}', [ResultController::class, 'show']);
 Route::post('/v1/payment', [PaymentController::class, 'payment']);
 Route::post('/v1/mail', [MailController::class, 'send']);
 

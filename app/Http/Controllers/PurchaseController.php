@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
+use App\Models\Detail;
 use App\Models\Product;
+use App\Models\Purchase;
 use Illuminate\Http\Request;
 
 class PurchaseController extends Controller
@@ -42,7 +45,20 @@ class PurchaseController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $carts = Cart::where('user_id', $id)->get();
+        foreach ($carts as $cart) {
+            echo '商品ID:' . $cart['product_id'];
+        }
+
+        $purchases = Purchase::where('user_id', $id)->get();
+        
+        // $products = Product::whereHas('carts', function ($query) use ($id) {
+        //     $query->where('user_id', $id);
+        // })->get();
+        return response()->json([
+            'data' => [$carts, $purchases]
+        ], 200);
     }
 
     /**

@@ -12,7 +12,7 @@ class Diagnosis extends Model
     protected $fillable = ['user_id', 'name'];
 
     public function characters() {
-        return $this->hasMany('App\Models\Character');
+        return $this->hasMany('App\Models\Character', 'diagnosis_id');
     }
 
     public function questions() {
