@@ -7,6 +7,7 @@ use App\Http\Controllers\LikeController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ResultController;
 use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\MailController;
 use Illuminate\Http\Request;
@@ -44,9 +45,14 @@ Route::apiResource('/v1/question', QuestionController::class)->only(([
 ]));
 
 Route::apiResource('/v1/purchase', PurchaseController::class)->only(([
-    'index', 'show'
+    'index', 'show', 'store', 'destroy'
 ]));
-Route::get('/v1/purchase/{id}', [PurchaseController::class, 'product']);
+Route::post('/v1/customer', [PurchaseController::class, 'customer']);
+
+Route::apiResource('/v1/cart', CartController::class)->only(([
+    'index', 'store','show', 'update', 'destroy'
+]));
+// Route::get('/v1/cart/{id}', [PurchaseController::class, 'cart']);
 Route::post('/v1/evalueation', [EvalueationController::class, 'store']);
 Route::post('/v1/result', [ResultController::class, 'store']);
 Route::get('/v1/result/{id}', [ResultController::class, 'show']);

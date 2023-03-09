@@ -21,20 +21,54 @@ class PurchaseController extends Controller
         return response()->json($items, 200);
     }
 
-    public function product()
-    {
+    // public function cart($id)
+    // {
+    //     $carts = Cart::select('product_id')->where('user_id', $id)->get();
+    //     // $items = array();
+    //     // foreach($carts as $cart) {
+    //     //     $items[] = Product::where('id', $cart['product_id'])->get();
+    //     // }
+    //     return response()->json([
+    //         'data' => $carts
+    //     ], 200);
+    // } 
 
-    } 
-
+    
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    // public function store(Request $request)
+    // {
+    //     $item = Cart::create($request->all());
+    //     return response()->json([
+    //         'data' => $item
+    //     ], 201);
+    // }
+
+    public function customer(Request $request)
     {
-        //
+        $purchase = new Purchase($request->get('purchase', [
+            'user_id' => $request->user_id,
+            'fullname' => $request->fullname,
+            'postcode' => $request->postcode,
+            'prefecture' => $request->prefecture,
+            'city' => $request->city,
+            'building_name' => $request->building_name,
+            'delivery_date' => $request->delivery_date,
+            'delivery_time' => $request->delivery_time,
+        ]));
+        $purchase->save();
+
+        $detail = new Detail($request->get('detail', [
+            'purchase_id' => $purchase->id,
+            'product_id' => $request->product_id,
+            'count' => $request->count,
+        ]));
+        $detail->save();
+        
     }
 
     /**
@@ -81,6 +115,6 @@ class PurchaseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cart::where('product_id', $id)->delete();
     }
 }

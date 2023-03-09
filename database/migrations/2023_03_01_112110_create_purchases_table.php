@@ -20,9 +20,9 @@ class CreatePurchasesTable extends Migration
             $table->char('postcode', 8);
             $table->string('prefecture');
             $table->string('city');
-            $table->string('building_name');
-            $table->date('delivery_date');
-            $table->time('delivery_time');
+            $table->string('building_name')->nullable();
+            $table->date('delivery_date')->nullable();
+            $table->time('delivery_time')->nullable();
             $table->timestamps();
         });
     }

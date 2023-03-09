@@ -9,12 +9,12 @@ class Cart extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'product_id'];
+    protected $fillable = ['product_id'];
 
-    public function user()
-    {
-        return $this->belongsTo('App\Models\User');
-    }
+    // public function user()
+    // {
+    //     return $this->belongsTo('App\Models\User');
+    // }
 
     public function likes()
     {

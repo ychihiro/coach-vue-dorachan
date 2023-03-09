@@ -23,9 +23,9 @@ class DatabaseSeeder extends Seeder
             ChoicesTableSeeder::class,
             ProductsTableSeeder::class,
             UsersTableSeeder::class,
-            PurchasesTableSeeder::class,
-            DetailsTableSeeder::class,
-            CartsTableSeeder::class,
+            // PurchasesTableSeeder::class,
+            // DetailsTableSeeder::class,
+            // CartsTableSeeder::class,
             ResultsTableSeeder::class,
             LikesTableSeeder::class
             ]);
