@@ -45,14 +45,15 @@ Route::apiResource('/v1/question', QuestionController::class)->only(([
 ]));
 
 Route::apiResource('/v1/purchase', PurchaseController::class)->only(([
-    'index', 'show', 'store', 'destroy'
+    'index', 'show', 'store', 'destroy', 'update'
 ]));
 Route::post('/v1/customer', [PurchaseController::class, 'customer']);
 
 Route::apiResource('/v1/cart', CartController::class)->only(([
     'index', 'store','show', 'update', 'destroy'
 ]));
-// Route::get('/v1/cart/{id}', [PurchaseController::class, 'cart']);
+Route::delete('/v1/cart/delete/{id}', [CartController::class, 'remove']);
+
 Route::post('/v1/evalueation', [EvalueationController::class, 'store']);
 Route::post('/v1/result', [ResultController::class, 'store']);
 Route::get('/v1/result/{id}', [ResultController::class, 'show']);

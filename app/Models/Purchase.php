@@ -14,4 +14,9 @@ class Purchase extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function product()
+    {
+        return $this->belongsTo('App\Models\Product');
+    }
 }

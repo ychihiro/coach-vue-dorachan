@@ -40,18 +40,17 @@ class PurchaseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // public function store(Request $request)
-    // {
-    //     $item = Cart::create($request->all());
-    //     return response()->json([
-    //         'data' => $item
-    //     ], 201);
-    // }
+    public function store(Request $request)
+    {
+    
+    }
 
     public function customer(Request $request)
     {
         $purchase = new Purchase($request->get('purchase', [
             'user_id' => $request->user_id,
+            'product_id' => $request->product_id,
+            'count' => $request->count,
             'fullname' => $request->fullname,
             'postcode' => $request->postcode,
             'prefecture' => $request->prefecture,
@@ -61,14 +60,6 @@ class PurchaseController extends Controller
             'delivery_time' => $request->delivery_time,
         ]));
         $purchase->save();
-
-        $detail = new Detail($request->get('detail', [
-            'purchase_id' => $purchase->id,
-            'product_id' => $request->product_id,
-            'count' => $request->count,
-        ]));
-        $detail->save();
-        
     }
 
     /**
@@ -79,19 +70,9 @@ class PurchaseController extends Controller
      */
     public function show($id)
     {
-        
-        $carts = Cart::where('user_id', $id)->get();
-        foreach ($carts as $cart) {
-            echo '商品ID:' . $cart['product_id'];
-        }
-
-        $purchases = Purchase::where('user_id', $id)->get();
-        
-        // $products = Product::whereHas('carts', function ($query) use ($id) {
-        //     $query->where('user_id', $id);
-        // })->get();
+        $items = Purchase::where('user_id', $id)->with('product')->get();
         return response()->json([
-            'data' => [$carts, $purchases]
+            'data' => [ $items]
         ], 200);
     }
 
@@ -104,7 +85,25 @@ class PurchaseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $update = [
+            'fullname' => $request->fullname,
+            'postcode' => $request->postcode,
+            'prefecture' => $request->prefecture,
+            'city' => $request->city,
+            'building_name' => $request->building_name,
+            'delivery_date' => $request->delivery_date,
+            'delivery_time' => $request->delivery_time,
+        ];
+        $item = Purchase::where('id', $id)->update($update);
+        if ($item) {
+            return response()->json([
+                'message' => 'Updated successfully',
+            ], 200);
+        } else {
+            return response()->json([
+                'message' => 'Not found',
+            ], 404);
+        }
     }
 
     /**

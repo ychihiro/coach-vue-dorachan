@@ -10,13 +10,16 @@ class Detail extends Model
     use HasFactory;
 
     protected $fillable = [
+        'use_id',
         'product_id',
         'purchase_id',
         'count',
     ];
 
-    public function product()
+    
+
+    public function purchase()
     {
-        return $this->belongsTo('App\Models\Product');
+        return $this->belongsTo('App\Models\Purchase');
     }
 }

@@ -15,7 +15,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        $carts = Cart::select(['id', 'product_id'])->get();
+        $carts = Cart::select('product_id')->get();
         return response()->json($carts, 200);
     }
 
@@ -39,21 +39,10 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function show($id)
-    // {
-    //     // $carts = Cart::select('product_id')->where('user_id', $id)->get();
-    //     // return response()->json([
-    //     //     'data' => $carts
-    //     // ], 200);
-    //     $carts = Cart::select('product_id')->where('user_id', $id)->get();
-    //     $items = array();
-    //     foreach($carts as $cart) {
-    //         $items[] = Product::where('id', $cart['product_id'])->get();
-    //     }
-    //     return response()->json([
-    //         'data' => $items
-    //     ], 200);
-    // }
+    public function show($id)
+    {
+
+    }
 
     /**
      * Update the specified resource in storage.
@@ -62,17 +51,10 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function update(Request $request, $id)
-    // {
-    //     $update = [
-    //         'count' => $request->count,
-    //         'user_id' => $id
-    //     ];
-    //     $item = Cart::where('product_id', $request->product_id)->update($update);
-    //     return response()->json([
-    //         'data' => $item
-    //     ], 200);
-    // }
+    public function update(Request $request, $id)
+    {
+
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -80,9 +62,16 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, $id)
+    public function destroy($id)
     {
         $item = Cart::where('product_id', $id)->first();
         $item->delete(); 
     }
+
+    public function remove($id)
+    {
+        Cart::where('product_id', $id)->delete();
+    }
+
+
 }

@@ -15,7 +15,7 @@ class PurchasesTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'user_id' => 'DFh5ScxnLBPbenjvAM6tRzYoH0w2',
+            // 'user_id' => 'DFh5ScxnLBPbenjvAM6tRzYoH0w2',
             'fullname' => 'のびのび太',
             'postcode' => 1790076,
             'prefecture' => '東京都',
@@ -26,7 +26,7 @@ class PurchasesTableSeeder extends Seeder
         ];
         Purchase::create($param);
         $param = [
-            'user_id' => 'dwpkPBBKYbQoOdUH8nAEWaD6wTY2',
+            // 'user_id' => 'dwpkPBBKYbQoOdUH8nAEWaD6wTY2',
             'fullname' => '花野花子',
             'postcode' => 1790076,
             'prefecture' => '東京都',
@@ -37,7 +37,7 @@ class PurchasesTableSeeder extends Seeder
         ];
         Purchase::create($param);
         $param = [
-            'user_id' => 'IUktP3N8NfetR61Cczy6',
+            // 'user_id' => 'IUktP3N8NfetR61Cczy6',
             'fullname' => '千尋',
             'postcode' => 1790076,
             'prefecture' => '東京都',

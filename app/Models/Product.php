@@ -26,8 +26,8 @@ class Product extends Model
         return $this->hasMany('App\Models\Cart');
     }
 
-    public function detail()
+    public function purchases()
     {
-        return $this->hasOne('App\Models\Detail');
+        return $this->hasMany('App\Models\Detail');
     }
 }

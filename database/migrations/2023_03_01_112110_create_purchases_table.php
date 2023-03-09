@@ -16,6 +16,8 @@ class CreatePurchasesTable extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->foreignUuid('user_id')->constrained();
+            $table->foreignId('product_id')->constrained();
+            $table->integer('count');
             $table->string('fullname');
             $table->char('postcode', 8);
             $table->string('prefecture');
