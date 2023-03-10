@@ -30,6 +30,6 @@ class DeliveryMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.delivery')->subject('メールの送信テスト')->with(['content' => $this->content]);
+        return $this->view('mail.delivery')->subject('商品お届けメッセージ');
     }
 }

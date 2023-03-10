@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             ChoicesTableSeeder::class,
             ProductsTableSeeder::class,
             UsersTableSeeder::class,
-            // PurchasesTableSeeder::class,
+            PurchasesTableSeeder::class,
             // DetailsTableSeeder::class,
             // CartsTableSeeder::class,
             ResultsTableSeeder::class,

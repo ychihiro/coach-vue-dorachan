@@ -55,6 +55,7 @@ Route::apiResource('/v1/cart', CartController::class)->only(([
 Route::delete('/v1/cart/delete/{id}', [CartController::class, 'remove']);
 
 Route::post('/v1/evalueation', [EvalueationController::class, 'store']);
+Route::get('/v1/evalueation', [EvalueationController::class, 'index']);
 Route::post('/v1/result', [ResultController::class, 'store']);
 Route::get('/v1/result/{id}', [ResultController::class, 'show']);
 Route::post('/v1/payment', [PaymentController::class, 'payment']);
