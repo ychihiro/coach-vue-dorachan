@@ -15,7 +15,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(1)->create();
         $this->call([
             DiagnosesTableSeeder::class,
             CharactersTableSeeder::class,
@@ -23,11 +22,6 @@ class DatabaseSeeder extends Seeder
             ChoicesTableSeeder::class,
             ProductsTableSeeder::class,
             UsersTableSeeder::class,
-            PurchasesTableSeeder::class,
-            // DetailsTableSeeder::class,
-            // CartsTableSeeder::class,
-            ResultsTableSeeder::class,
-            LikesTableSeeder::class
             ]);
     }
 }

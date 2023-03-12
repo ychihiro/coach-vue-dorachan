@@ -88,110 +88,110 @@ class CharactersTableSeeder extends Seeder
         Character::create($param);
         $param = [
             'diagnosis_id' => 2,
-            'name' => 'アンパンマン',
-            'path' => 'ドラえもん.jpg',
-            'description' => '優しく面倒見のいいあなたはドラえもんタイプ！困っている人を放っておけず助けてあげちゃうそんなあなたは周囲からも好かれます！一方で繊細で傷つきやすく、悪い評価が気になると落ち込んでしまうことも・・・。クヨクヨと悩みすぎずに気持ちを切り替えてね！',
+            'name' => 'ドラえもん',
+            'path' => 'images/ドラえもん.jpg',
+            'description' => 'のび太を助ける猫型ロボット！',
             'cooperation' => 5,
-            'extroversion' => 5,
-            'sincerity' => 5,
-            'openness' => 5,
-            'nerve' => 5
+            'extroversion' => 3,
+            'sincerity' => 3,
+            'openness' => 4,
+            'nerve' => 4
         ];
         Character::create($param);
         $param = [
             'diagnosis_id' => 3,
             'name' => 'ドラえもん',
-            'path' => 'ドラえもん.jpg',
-            'description' => '優しく面倒見のいいあなたはドラえもんタイプ！困っている人を放っておけず助けてあげちゃうそんなあなたは周囲からも好かれます！一方で繊細で傷つきやすく、悪い評価が気になると落ち込んでしまうことも・・・。クヨクヨと悩みすぎずに気持ちを切り替えてね！',
-            'cooperation' => 9,
-            'extroversion' => 8,
+            'path' => 'images/ドラえもん.jpg',
+            'description' => 'のび太を助ける猫型ロボット！',
+            'cooperation' => 5,
+            'extroversion' => 3,
             'sincerity' => 3,
-            'openness' => 6,
-            'nerve' => 8
+            'openness' => 4,
+            'nerve' => 4
         ];
         Character::create($param);
         $param = [
             'diagnosis_id' => 4,
             'name' => 'ドラえもん',
-            'path' => 'ドラえもん.jpg',
-            'description' => '優しく面倒見のいいあなたはドラえもんタイプ！困っている人を放っておけず助けてあげちゃうそんなあなたは周囲からも好かれます！一方で繊細で傷つきやすく、悪い評価が気になると落ち込んでしまうことも・・・。クヨクヨと悩みすぎずに気持ちを切り替えてね！',
-            'cooperation' => 9,
-            'extroversion' => 8,
+            'path' => 'images/ドラえもん.jpg',
+            'description' => 'のび太を助ける猫型ロボット！',
+            'cooperation' => 5,
+            'extroversion' => 3,
             'sincerity' => 3,
-            'openness' => 6,
-            'nerve' => 8
+            'openness' => 4,
+            'nerve' => 4
         ];
         Character::create($param);
         $param = [
             'diagnosis_id' => 5,
             'name' => 'ドラえもん',
-            'path' => 'ドラえもん.jpg',
-            'description' => '優しく面倒見のいいあなたはドラえもんタイプ！困っている人を放っておけず助けてあげちゃうそんなあなたは周囲からも好かれます！一方で繊細で傷つきやすく、悪い評価が気になると落ち込んでしまうことも・・・。クヨクヨと悩みすぎずに気持ちを切り替えてね！',
-            'cooperation' => 9,
-            'extroversion' => 8,
+            'path' => 'images/ドラえもん.jpg',
+            'description' => 'のび太を助ける猫型ロボット！',
+            'cooperation' => 5,
+            'extroversion' => 3,
             'sincerity' => 3,
-            'openness' => 6,
-            'nerve' => 8
+            'openness' => 4,
+            'nerve' => 4
         ];
         Character::create($param);
         $param = [
             'diagnosis_id' => 6,
             'name' => 'ドラえもん',
-            'path' => 'ドラえもん.jpg',
-            'description' => '優しく面倒見のいいあなたはドラえもんタイプ！困っている人を放っておけず助けてあげちゃうそんなあなたは周囲からも好かれます！一方で繊細で傷つきやすく、悪い評価が気になると落ち込んでしまうことも・・・。クヨクヨと悩みすぎずに気持ちを切り替えてね！',
-            'cooperation' => 9,
-            'extroversion' => 8,
+            'path' => 'images/ドラえもん.jpg',
+            'description' => 'のび太を助ける猫型ロボット！',
+            'cooperation' => 5,
+            'extroversion' => 3,
             'sincerity' => 3,
-            'openness' => 6,
-            'nerve' => 8
+            'openness' => 4,
+            'nerve' => 4
         ];
         Character::create($param);
         $param = [
             'diagnosis_id' => 7,
             'name' => 'ドラえもん',
-            'path' => 'ドラえもん.jpg',
-            'description' => '優しく面倒見のいいあなたはドラえもんタイプ！困っている人を放っておけず助けてあげちゃうそんなあなたは周囲からも好かれます！一方で繊細で傷つきやすく、悪い評価が気になると落ち込んでしまうことも・・・。クヨクヨと悩みすぎずに気持ちを切り替えてね！',
-            'cooperation' => 9,
-            'extroversion' => 8,
+            'path' => 'images/ドラえもん.jpg',
+            'description' => 'のび太を助ける猫型ロボット！',
+            'cooperation' => 5,
+            'extroversion' => 3,
             'sincerity' => 3,
-            'openness' => 6,
-            'nerve' => 8
+            'openness' => 4,
+            'nerve' => 4
         ];
         Character::create($param);
         $param = [
             'diagnosis_id' => 8,
             'name' => 'ドラえもん',
-            'path' => 'ドラえもん.jpg',
-            'description' => '優しく面倒見のいいあなたはドラえもんタイプ！困っている人を放っておけず助けてあげちゃうそんなあなたは周囲からも好かれます！一方で繊細で傷つきやすく、悪い評価が気になると落ち込んでしまうことも・・・。クヨクヨと悩みすぎずに気持ちを切り替えてね！',
-            'cooperation' => 9,
-            'extroversion' => 8,
+            'path' => 'images/ドラえもん.jpg',
+            'description' => 'のび太を助ける猫型ロボット！',
+            'cooperation' => 5,
+            'extroversion' => 3,
             'sincerity' => 3,
-            'openness' => 6,
-            'nerve' => 8
+            'openness' => 4,
+            'nerve' => 4
         ];
         Character::create($param);
         $param = [
             'diagnosis_id' => 9,
             'name' => 'ドラえもん',
-            'path' => 'ドラえもん.jpg',
-            'description' => '優しく面倒見のいいあなたはドラえもんタイプ！困っている人を放っておけず助けてあげちゃうそんなあなたは周囲からも好かれます！一方で繊細で傷つきやすく、悪い評価が気になると落ち込んでしまうことも・・・。クヨクヨと悩みすぎずに気持ちを切り替えてね！',
-            'cooperation' => 9,
-            'extroversion' => 8,
+            'path' => 'images/ドラえもん.jpg',
+            'description' => 'のび太を助ける猫型ロボット！',
+            'cooperation' => 5,
+            'extroversion' => 3,
             'sincerity' => 3,
-            'openness' => 6,
-            'nerve' => 8
+            'openness' => 4,
+            'nerve' => 4
         ];
         Character::create($param);
         $param = [
             'diagnosis_id' => 10,
             'name' => 'ドラえもん',
-            'path' => 'ドラえもん.jpg',
-            'description' => '優しく面倒見のいいあなたはドラえもんタイプ！困っている人を放っておけず助けてあげちゃうそんなあなたは周囲からも好かれます！一方で繊細で傷つきやすく、悪い評価が気になると落ち込んでしまうことも・・・。クヨクヨと悩みすぎずに気持ちを切り替えてね！',
-            'cooperation' => 9,
-            'extroversion' => 8,
+            'path' => 'images/ドラえもん.jpg',
+            'description' => 'のび太を助ける猫型ロボット！',
+            'cooperation' => 5,
+            'extroversion' => 3,
             'sincerity' => 3,
-            'openness' => 6,
-            'nerve' => 8
+            'openness' => 4,
+            'nerve' => 4
         ];
         Character::create($param);
     }

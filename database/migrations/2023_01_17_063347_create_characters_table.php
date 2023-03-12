@@ -16,14 +16,14 @@ class CreateCharactersTable extends Migration
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
             $table->foreignId('diagnosis_id')->constrained();
-            $table->string('name')->nullable();
-            $table->string('path')->nullable();
-            $table->text('description')->nullable();
-            $table->integer('cooperation')->nullable();
-            $table->integer('extroversion')->nullable();
-            $table->integer('sincerity')->nullable();
-            $table->integer('openness')->nullable();
-            $table->integer('nerve')->nullable();
+            $table->string('name');
+            $table->string('path');
+            $table->text('description');
+            $table->integer('cooperation');
+            $table->integer('extroversion');
+            $table->integer('sincerity');
+            $table->integer('openness');
+            $table->integer('nerve');
             $table->timestamps();
         });
     }

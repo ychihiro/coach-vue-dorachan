@@ -22,17 +22,17 @@ class UsersTableSeeder extends Seeder
         ];
         User::create($param);
         $param = [
-            'id' => 'dwpkPBBKYbQoOdUH8nAEWaD6wTY2',
-            'name' => '花子',
-            'email' => 'hanako@flower.com',
-            'password' => 'hanakosan',
+            'id' => 'NuoKmoaXlJQsx1EH6YZPxHfnR5t1',
+            'name' => '診断作成者',
+            'email' => 'create@diagnosis.com',
+            'password' => 'creatediagnosis',
         ];
         User::create($param);
         $param = [
-            'id' => 'IUktP3N8NfetR61Cczy6',
-            'name' => '千尋',
-            'email' => 'y.chihiro0510@gmail.com',
-            'password' => 'chichichichi',
+            'id' => 'Y5Dq1ClyJkegx5HICNSlvORMvTB3',
+            'name' => '管理者',
+            'email' => 'addmin@user.com',
+            'password' => 'addminuser',
         ];
         User::create($param);
     }

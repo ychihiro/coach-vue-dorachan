@@ -19,7 +19,7 @@ class CreatePurchasesTable extends Migration
             $table->foreignId('product_id')->constrained();
             $table->integer('count');
             $table->string('fullname');
-            $table->char('postcode', 8);
+            $table->char('postcode', 7);
             $table->string('prefecture');
             $table->string('city');
             $table->string('building_name')->nullable();

@@ -9,7 +9,6 @@ class Character extends Model
 {
     use HasFactory;
 
-    // protected $fillable = ['diagnosis_name', 'name', 'path'];
     protected $guarded = [
         'id',
         'created_at',

@@ -9,11 +9,6 @@ class Question extends Model
 {
     use HasFactory;
 
-    // protected $fillable = [
-    //     'diagnosis_id',
-    //     'content',
-    //     'number'
-    // ];
     protected $guarded = [
         'id',
         'created_at',

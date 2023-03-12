@@ -4,7 +4,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\DiagnosisController;
 use App\Http\Controllers\EvalueationController;
 use App\Http\Controllers\LikeController;
-use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ResultController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\CartController;
@@ -24,42 +23,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
 Route::apiResource('/v1/user', UserController::class)->only(([
-    'store','show', 'index'
+    'store'
 ]));
-
-Route::apiResource('/v1/like', LikeController::class)->only(([
-    'index','show', 'store' , 'destroy'
-]));
-
 Route::apiResource('/v1/diagnosis', DiagnosisController::class)->only(([
     'index', 'store', 'show'
 ]));
-
-Route::apiResource('/v1/question', QuestionController::class)->only(([
-    'store', 'index', 'show'
+Route::apiResource('/v1/like', LikeController::class)->only(([
+    'index','show', 'store' , 'destroy'
 ]));
-
-Route::apiResource('/v1/purchase', PurchaseController::class)->only(([
-    'index', 'show', 'store', 'destroy', 'update'
-]));
-Route::post('/v1/customer', [PurchaseController::class, 'customer']);
-
-Route::apiResource('/v1/cart', CartController::class)->only(([
-    'index', 'store','show', 'update', 'destroy'
-]));
-Route::delete('/v1/cart/delete/{id}', [CartController::class, 'remove']);
-
 Route::post('/v1/evalueation', [EvalueationController::class, 'store']);
-Route::get('/v1/evalueation', [EvalueationController::class, 'index']);
 Route::post('/v1/result', [ResultController::class, 'store']);
 Route::get('/v1/result/{id}', [ResultController::class, 'show']);
+Route::apiResource('/v1/cart', CartController::class)->only(([
+    'index', 'store', 'destroy'
+]));
+Route::delete('/v1/cart/all-delete/{id}', [CartController::class, 'remove']);
+Route::apiResource('/v1/purchase', PurchaseController::class)->only(([
+    'index', 'show', 'store', 'update'
+]));
 Route::post('/v1/payment', [PaymentController::class, 'payment']);
 Route::post('/v1/mail', [MailController::class, 'send']);
-
-
-// Route::get('/v1/like/{id}', [DiagnosisController::class, 'check']);

@@ -15,10 +15,10 @@ class CreateChoicesTable extends Migration
     {
         Schema::create('choices', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('question_id')->nullable()->constrained();
-            $table->string('content')->nullable();
-            $table->string('category')->nullable();
-            $table->integer('score')->nullable();
+            $table->foreignId('question_id')->constrained();
+            $table->string('content');
+            $table->string('category');
+            $table->integer('score');
             $table->timestamps();
         });
     }

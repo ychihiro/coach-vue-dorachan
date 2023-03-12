@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Character;
 use App\Models\Diagnosis;
-use App\Models\Purchase;
 use App\Models\Result;
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class ResultController extends Controller
